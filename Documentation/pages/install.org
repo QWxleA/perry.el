@@ -1,0 +1,33 @@
+#+TITLE: Installation
+#+SUBTITLE:
+#+CATEGORY: perry
+#+TAGS: emacs, elisp, blog
+#+DATE: <2017-01-31 Tue>
+#+LANGUAGE: en
+#+DESCRIPTION: installation and configuration for perry
+
+* Installation
+
+For now, copy or git clone the repository:
+
+#+BEGIN_SRC shell
+% git clone https://github.com/QWxleA/perry.git
+#+END_SRC
+
+Then add =perry= to your load-path:
+
+#+BEGIN_SRC emacs-lisp
+    (add-to-list 'load-path "~/Projects/perry.el")
+#+END_SRC
+
+Start perry with =perry-manager=
+
+* Configuration
+
+An example configuration can be found in perry.el
+
+Add your own configuration to =perry--rc=
+
+* Important
+
+Perry has not even reached alpha-quality yet, don't use this for anything useful!

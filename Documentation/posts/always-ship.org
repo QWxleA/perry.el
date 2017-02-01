@@ -1,0 +1,42 @@
+#+TITLE: Release early, so here is 0.0.1
+#+SUBTITLE:
+#+AUTHOR:      Alex (QWxleA)
+#+EMAIL:       qwxlea@gmail.com
+#+DATE:        2017-01-31
+#+CATEGORY:    Emacs
+#+TAGS:        software, GitHub, Emacs, blog, org-mode
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: First public version of perry: 0.0.1
+
+#+BEGIN_QUOTE
+Release Early, release Often
+#+END_QUOTE
+source: [[http://www.catb.org/esr/writings/homesteading/cathedral-bazaar/ar01s04.html][Release Early, Release Often]]
+
+There is always one more thing to add, before a thing is 'ready'. But that means nothing is ever ready.
+
+Perry.el, my org-mode static site builder is far from ready, but this version more or less works, so here is version 0.0.1
+
+** Static websites and org-mode
+
+There are several other implementations of a static site generator for org-mode, these are the ones that influenced me most:
+
+- [[https://justin.abrah.ms/emacs/orgmode_static_site_generator.html][Writing a static site generator using org-mode.]]
+- [[https://github.com/kelvinh/org-page][kelvinh/org-page: A static site generator based on Emacs and org mode.]]
+- [[https://github.com/emacs-china/EGO][emacs-china/EGO: EGO is a static site generator that depends on Emacs, Git and Org-mode.]]
+
+** Jekyll and org-mode
+
+Why did I decide to build this one? First, coding something is a great way to learn, and this is my way of learning elisp.
+
+Second, I think the best static site builder is  [[https://jekyllrb.com/][Jekyll]]. It is quite simple, versatile, and immensely popular. I want to combine the good parts of Jekyll, with org-mode's integration in Emacs.
+
+The plan is to make it easy to separate html and css in templates (using [[https://github.com/Wilfred/mustache.el][mustache]]), and make it easy to choose different templates for different pages on your site. Deployment will be automated, for starters to Github.
+
+** Todo
+
+What needs fixing right now?
+
+- The theme needs (a lot of) work. The quote doesn't look right, for example. 
+- Deployment is still done by hand.

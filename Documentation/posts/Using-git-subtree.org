@@ -1,0 +1,35 @@
+#+TITLE:       Easily deploying to GitHub pages
+#+AUTHOR:      Alex (QWxleA)
+#+EMAIL:       qwxlea@gmail.com
+#+DATE:        2017-02-01 Wed
+#+CATEGORY:    github
+#+TAGS:        Emacs, blog, perry.el , git
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Using git-branch to create a detached branch of yuor repo that is then linked into master
+
+Like so many other projects, this one lives on Github. Github pages is a great way to have a website for your project, but the way it is implemented might be tricky, if you decide not to use [[https://jekyllrb.com/][Jekyll]].
+
+Github projects are located in a child-folder of your Github accound, in perry.el's case =XXX=. The projects website is located in the gh-pages branch of the project.
+
+The easiest way to setup your project to have you project in =master=, your branches in =whatever= and your blog/documentation in =gh-pages= is:
+
+(This script needs to be ran from a repo checked out from GitHub)
+
+#+BEGIN_EXPORT html
+<script src="https://gist.github.com/QWxleA/412d0b7fb737afcf61cc8c8d42545942.js"></script>
+#+END_EXPORT
+
+When the script is done, you end up with:
+
+#+BEGIN_EXAMPLE
+/repository
+/repository/.nojekyll          -> keeps GitHub from trying to run jekyll on your project
+/repository/.gitignore         -> keeps _export from being checked into the master branch
+/repository/_export            -> linked to the gh-pages branch
+/repository/_export/index.html -> your projects documentation
+#+END_EXAMPLE
+
+** Alternative
+
+As an alternative you can use [[https://github.com/blog/2228-simpler-github-pages-publishing][Simpler GitHub Pages publishing]], but this has the downside that it has your generated content in your master branch.

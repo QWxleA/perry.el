@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {{>head}}
+  <body>
+    <main class="wrapper">
+    {{>header}}
+    <div class="container">
+      {{>general-intro}}
+      <section class="post-list">
+        <div class="container">
+          {{& content}} 
+        </div>
+      </section>
+      {{>footer}}
+    </div>
+    </main>
+  </body>
+</html>

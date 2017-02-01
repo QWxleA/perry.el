@@ -1,1 +1,4 @@
-_export
+NOTINGIT
+/Documentation/_export/
+.sass-cache
+/themes/thinkspace/css/
