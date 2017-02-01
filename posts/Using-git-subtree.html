@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Perry Documentation</title>
+  <title>Easily deploying to GitHub pages</title>
 
-  <meta name="description" content="Perry, a static site converter, build using elisp and orgmode">
+  <meta name="description" content="Using git-branch to create a detached branch of yuor repo that is then linked into master">
   <meta name="keywords" content="{% if page.keywords %}blog, static site, elisp, Emacs{% else %}blog, static site, elisp, Emacs{% endif %}">
 
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-  <link rel="canonical" href="posts/tmp.html">
+  <link rel="canonical" href="posts/Using-git-subtree.html">
     <link rel="alternate" type="application/rss+xml" title="Perry Documentation" href="http://localhost:8080//feed.xml">
 
 </head>
@@ -46,31 +46,45 @@
 </header>
 
     <div class="container">
-      <section class="intro">
-  <div class="container">
-    <p class="lead"><strong class="author-name" itemprop="name">Perry.el</strong> is a static site converter, written in elisp, using org-mode and mustache to create content</p>
-  </div>
-</section>
+      <p>
+Like so many other projects, this one lives on Github. Github pages is a great way to have a website for your project, but the way it is implemented might be tricky, if you decide not to use <a href="https://jekyllrb.com/">Jekyll</a>.
+</p>
 
-      <section class="post-list">
-        <div class="container">
-          <article class="post-item">
-<span class="post-meta date-label">2017-02-01 Wed</span>
-<div class="article-title">
-  <a class="post-link" href="posts/Using-git-subtree.html">Easily deploying to GitHub pages</a>
-  <p>Using git-branch to create a detached branch of yuor repo that is then linked into master</p>
+<p>
+Github projects are located in a child-folder of your Github accound, in perry.el's case <code>XXX</code>. The projects website is located in the gh-pages branch of the project.
+</p>
+
+<p>
+The easiest way to setup your project to have you project in <code>master</code>, your branches in <code>whatever</code> and your blog/documentation in <code>gh-pages</code> is:
+</p>
+
+<p>
+(This script needs to be ran from a repo checked out from GitHub)
+</p>
+
+<script src="https://gist.github.com/QWxleA/412d0b7fb737afcf61cc8c8d42545942.js"></script>
+
+<p>
+When the script is done, you end up with:
+</p>
+
+<pre class="example">
+/repository
+/repository/.nojekyll          -&gt; keeps GitHub from trying to run jekyll on your project
+/repository/.gitignore         -&gt; keeps _export from being checked into the master branch
+/repository/_export            -&gt; linked to the gh-pages branch
+/repository/_export/index.html -&gt; your projects documentation
+</pre>
+
+<div id="outline-container-org370d306" class="outline-2">
+<h2 id="org370d306">Alternative</h2>
+<div class="outline-text-2" id="text-org370d306">
+<p>
+As an alternative you can use <a href="https://github.com/blog/2228-simpler-github-pages-publishing">Simpler GitHub Pages publishing</a>, but this has the downside that it has your generated content in your master branch.
+</p>
 </div>
-</article>
-<article class="post-item">
-<span class="post-meta date-label">2017-01-31</span>
-<div class="article-title">
-  <a class="post-link" href="posts/always-ship.html">Release early, so here is 0.0.1</a>
-  <p>First public version of perry: 0.0.1</p>
 </div>
-</article>
- 
-        </div>
-      </section>
+
       <footer class="site-footer">
   <div class="container">
     <small class="block">&copy; 2017 Alex &#39;QWxleA&#39; Poslavsky. All rights reserved.</small>

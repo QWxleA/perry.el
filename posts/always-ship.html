@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Release early, so here is 0.0.1</title>
+
+  <meta name="description" content="First public version of perry: 0.0.1">
+  <meta name="keywords" content="{% if page.keywords %}blog, static site, elisp, Emacs{% else %}blog, static site, elisp, Emacs{% endif %}">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <link rel="canonical" href="posts/always-ship.html">
+    <link rel="alternate" type="application/rss+xml" title="Perry Documentation" href="http://localhost:8080//feed.xml">
+
+</head>
+
+  <body>
+    <main class="wrapper">
+    <header class="site-header">
+  <nav class="nav">
+    <div class="container">
+      <h1 class="logo">
+        <a href="/">
+        Perry Documentation
+        </a>
+      </h1>
+      <ul class="navbar">
+        <li>
+  <a class="menu-item "
+    href="/install.html"  title="">
+    Installation</a>
+</li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <div class="container">
+      <blockquote>
+<p>
+Release Early, release Often
+</p>
+</blockquote>
+<p>
+source: <a href="http://www.catb.org/esr/writings/homesteading/cathedral-bazaar/ar01s04.html">Release Early, Release Often</a>
+</p>
+
+<p>
+There is always one more thing to add, before a thing is 'ready'. But that means nothing is ever ready.
+</p>
+
+<p>
+Perry.el, my org-mode static site builder is far from ready, but this version more or less works, so here is version 0.0.1
+</p>
+
+<div id="outline-container-org23e4afc" class="outline-2">
+<h2 id="org23e4afc">Static websites and org-mode</h2>
+<div class="outline-text-2" id="text-org23e4afc">
+<p>
+There are several other implementations of a static site generator for org-mode, these are the ones that influenced me most:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://justin.abrah.ms/emacs/orgmode_static_site_generator.html">Writing a static site generator using org-mode.</a></li>
+<li><a href="https://github.com/kelvinh/org-page">kelvinh/org-page: A static site generator based on Emacs and org mode.</a></li>
+<li><a href="https://github.com/emacs-china/EGO">emacs-china/EGO: EGO is a static site generator that depends on Emacs, Git and Org-mode.</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5ed46b7" class="outline-2">
+<h2 id="org5ed46b7">Jekyll and org-mode</h2>
+<div class="outline-text-2" id="text-org5ed46b7">
+<p>
+Why did I decide to build this one? First, coding something is a great way to learn, and this is my way of learning elisp.
+</p>
+
+<p>
+Second, I think the best static site builder is  <a href="https://jekyllrb.com/">Jekyll</a>. It is quite simple, versatile, and immensely popular. I want to combine the good parts of Jekyll, with org-mode's integration in Emacs.
+</p>
+
+<p>
+The plan is to make it easy to separate html and css in templates (using <a href="https://github.com/Wilfred/mustache.el">mustache</a>), and make it easy to choose different templates for different pages on your site. Deployment will be automated, for starters to Github.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0d2d20" class="outline-2">
+<h2 id="orgb0d2d20">Todo</h2>
+<div class="outline-text-2" id="text-orgb0d2d20">
+<p>
+What needs fixing right now?
+</p>
+
+<ul class="org-ul">
+<li>The theme needs (a lot of) work. The quote doesn't look right, for example.</li>
+<li>Deployment is still done by hand.</li>
+</ul>
+</div>
+</div>
+
+      <footer class="site-footer">
+  <div class="container">
+    <small class="block">&copy; 2017 Alex &#39;QWxleA&#39; Poslavsky. All rights reserved.</small>
+    <small class="block">Made with <i class="fa fa-heart" aria-hidden="true" style="color:#DD3D36"></i> using <a href="https://github.com/QWxleA/perry.el">Perry.el</a>. Typeface by <a href="https://fonts.google.com/specimen/Inconsolata">Inconsolata</a> and <a href="http://fontawesome.io/">Font Awesome</a>.</small>
+    <small><a href="https://github.com/heiswayi/thinkspace">Thinkspace</a> theme by <a href="http://heiswayi.github.io/">Heiswayi Nrird</a>.</small>
+  </div>
+</footer>
+
+    </div>
+    </main>
+  </body>
+</html>
